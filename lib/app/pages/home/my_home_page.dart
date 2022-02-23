@@ -4,8 +4,6 @@ import 'package:get/get.dart';
 import 'package:google_meet_ui/app/app.dart';
 import 'package:google_meet_ui/app/pages/home/my_home_controller.dart';
 
-import '../../widgets/custom.dart';
-
 class MyHomePage extends StatelessWidget {
   final controller = Get.put(MyHomeController());
   MyHomePage({Key? key}) : super(key: key);
@@ -25,7 +23,7 @@ class MyHomePage extends StatelessWidget {
                 backgroundColor: Colors.orange,
                 child: Text(
                   letter,
-                  style: TextStyle(fontSize: 40.0, color: Colors.white),
+                  style: const TextStyle(fontSize: 40.0, color: Colors.white),
                 ),
               ),
             ),
@@ -36,7 +34,7 @@ class MyHomePage extends StatelessWidget {
               ),
               title: Text(
                 title,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
               ),
               onTap: () {
                 Navigator.pop(context);
@@ -49,7 +47,7 @@ class MyHomePage extends StatelessWidget {
               ),
               title: Text(
                 settings,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
               ),
               onTap: () {
                 Navigator.pop(context);
@@ -62,7 +60,7 @@ class MyHomePage extends StatelessWidget {
               ),
               title: Text(
                 contactUs,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
               ),
               onTap: () {
                 Navigator.pop(context);
@@ -105,7 +103,7 @@ class MyHomePage extends StatelessWidget {
                     onPressed: () {},
                     child: Text(
                       option1,
-                      style: TextStyle(color: Colors.black),
+                      style: const TextStyle(color: Colors.black),
                     ),
                   ),
                 ),
@@ -138,7 +136,7 @@ class MyHomePage extends StatelessWidget {
                     onPressed: () {},
                     child: Text(
                       option2,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.deepPurple,
                       ),
                     ),
