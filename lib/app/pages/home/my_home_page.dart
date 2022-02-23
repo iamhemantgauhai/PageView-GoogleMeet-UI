@@ -1,7 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_meet_ui/app/app.dart';
 import 'package:google_meet_ui/app/pages/home/my_home_controller.dart';
 
 import '../../widgets/custom.dart';
@@ -18,13 +18,13 @@ class MyHomePage extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            const UserAccountsDrawerHeader(
-              accountName: Text(""),
-              accountEmail: Text(""),
+            UserAccountsDrawerHeader(
+              accountName: Text(name),
+              accountEmail: Text(email),
               currentAccountPicture: CircleAvatar(
                 backgroundColor: Colors.orange,
                 child: Text(
-                  "",
+                  letter,
                   style: TextStyle(fontSize: 40.0, color: Colors.white),
                 ),
               ),
@@ -34,8 +34,8 @@ class MyHomePage extends StatelessWidget {
                 Icons.home,
                 color: Colors.white,
               ),
-              title: const Text(
-                "",
+              title: Text(
+                title,
                 style: TextStyle(color: Colors.white),
               ),
               onTap: () {
@@ -47,8 +47,8 @@ class MyHomePage extends StatelessWidget {
                 Icons.settings,
                 color: Colors.white,
               ),
-              title: const Text(
-                "",
+              title: Text(
+                settings,
                 style: TextStyle(color: Colors.white),
               ),
               onTap: () {
@@ -60,8 +60,8 @@ class MyHomePage extends StatelessWidget {
                 Icons.contacts,
                 color: Colors.white,
               ),
-              title: const Text(
-                "",
+              title: Text(
+                contactUs,
                 style: TextStyle(color: Colors.white),
               ),
               onTap: () {
@@ -74,7 +74,7 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.black,
         centerTitle: true,
-        title: const Text(""),
+        title: Text(pageTitle),
         actions: [
           TextButton(
             onPressed: () {
@@ -86,95 +86,96 @@ class MyHomePage extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
-        children: [
-          const SizedBox(
-            height: 20.0,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                padding: const EdgeInsets.only(left: 10.0),
-                height: 42.0,
-                width: 175.0,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(primary: Colors.deepPurple),
-                  onPressed: () {},
-                  child: const Text(
-                    "",
-                    style: TextStyle(color: Colors.black),
-                  ),
-                ),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5.0),
-                  border: const Border(
-                    top: BorderSide(
-                      color: Colors.grey,
-                      style: BorderStyle.solid,
-                    ),
-                    bottom: BorderSide(
-                      color: Colors.grey,
-                      style: BorderStyle.solid,
-                    ),
-                    left: BorderSide(
-                      color: Colors.grey,
-                      style: BorderStyle.solid,
-                    ),
-                    right: BorderSide(
-                      color: Colors.grey,
-                      style: BorderStyle.solid,
-                    ),
-                  ),
-                  color: Colors.black,
-                ),
-                height: 40.0,
-                width: 155.0,
-                child: TextButton(
-                  onPressed: () {},
-                  child: const Text(
-                    "",
-                    style: TextStyle(
-                      color: Colors.deepPurple,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 100.0,
-          ),
-          Expanded(
-            child: PageView.builder(
-              scrollDirection: Axis.horizontal,
-              controller: controller.pageControl,
-              itemCount: controller.scrollItems?.length,
-              onPageChanged: controller.changeInd,
-              physics: const AlwaysScrollableScrollPhysics(),
-              itemBuilder: (context, index) {
-                return controller.scrollItems![index];
-              },
+      body: GetBuilder<MyHomeController>(
+        builder: (controller) => Column(
+          children: [
+            const SizedBox(
+              height: 20.0,
             ),
-          ),
-          const SizedBox(
-            height: 10.0,
-          ),
-          DotsIndicator(
-            axis: Axis.horizontal,
-            decorator: const DotsDecorator(
-              activeColor: Colors.deepPurple,
-              size: Size(5, 5),
-              activeSize: Size(10, 10),
-              color: Colors.grey,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  padding: const EdgeInsets.only(left: 10.0),
+                  height: 42.0,
+                  width: 175.0,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(primary: Colors.deepPurple),
+                    onPressed: () {},
+                    child: Text(
+                      option1,
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5.0),
+                    border: const Border(
+                      top: BorderSide(
+                        color: Colors.grey,
+                        style: BorderStyle.solid,
+                      ),
+                      bottom: BorderSide(
+                        color: Colors.grey,
+                        style: BorderStyle.solid,
+                      ),
+                      left: BorderSide(
+                        color: Colors.grey,
+                        style: BorderStyle.solid,
+                      ),
+                      right: BorderSide(
+                        color: Colors.grey,
+                        style: BorderStyle.solid,
+                      ),
+                    ),
+                    color: Colors.black,
+                  ),
+                  height: 40.0,
+                  width: 155.0,
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      option2,
+                      style: TextStyle(
+                        color: Colors.deepPurple,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
-            dotsCount: 2,
-            position: controller.ind!, //controller.ind!,
-          ),
-        ],
+            const SizedBox(
+              height: 100.0,
+            ),
+            Expanded(
+              child: PageView.builder(
+                scrollDirection: Axis.horizontal,
+                controller: controller.pageControl,
+                itemCount: controller.scrollItems?.length,
+                onPageChanged: controller.changeInd,
+                physics: const AlwaysScrollableScrollPhysics(),
+                itemBuilder: (context, index) {
+                  return controller.scrollItems![index];
+                },
+              ),
+            ),
+            const SizedBox(
+              height: 10.0,
+            ),
+            DotsIndicator(
+              decorator: const DotsDecorator(
+                activeColor: Colors.deepPurple,
+                size: Size(5, 5),
+                activeSize: Size(10, 10),
+                color: Colors.grey,
+              ),
+              dotsCount: 2,
+              position: controller.ind!, //controller.ind!,
+            ),
+          ],
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.grey[900],

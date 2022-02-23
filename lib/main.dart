@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_meet_ui/app/app.dart';
 
 import 'app/pages/home/my_home_page.dart';
 
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "",
+      title: appTitle,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

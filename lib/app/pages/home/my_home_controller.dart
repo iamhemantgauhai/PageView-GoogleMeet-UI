@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_meet_ui/app/app.dart';
 
 class MyHomeController extends GetxController {
   var selectedPageNumber = 0.obs;
@@ -26,34 +27,34 @@ class MyHomeController extends GetxController {
 
   List? scrollItems = [
     Column(
-      children: const [
-        Center(
+      children: [
+        const Center(
           child: CircleAvatar(
             radius: 150.0,
             backgroundColor: Colors.deepPurple,
             // backgroundImage: AssetImage('images/meet.jpeg'),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10.0,
         ),
         Center(
           child: Text(
-            'Get a link that you can share',
-            style: TextStyle(
+            paraOne,
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 18.0,
               height: 2.0,
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10.0,
         ),
         Center(
           child: Text(
-            'Tap New Message to get a link that you can send to',
-            style: TextStyle(
+            paraTwo,
+            style: const TextStyle(
               color: Colors.grey,
               fontSize: 16.0,
             ),
@@ -61,47 +62,47 @@ class MyHomeController extends GetxController {
         ),
         Center(
           child: Text(
-            'people that you want to meet with',
-            style: TextStyle(
+            paraThree,
+            style: const TextStyle(
               color: Colors.grey,
               fontSize: 18.0,
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10.0,
         ),
       ],
     ),
     Column(
-      children: const [
-        Center(
+      children: [
+        const Center(
           child: CircleAvatar(
             radius: 150.0,
             backgroundColor: Colors.deepOrange,
             // backgroundImage: AssetImage('images/meet.jpeg'),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10.0,
         ),
         Center(
           child: Text(
-            'Get a link that you can share',
-            style: TextStyle(
+            paraFour,
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 18.0,
               height: 2.0,
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10.0,
         ),
         Center(
           child: Text(
-            'Tap New Message to get a link that you can send to',
-            style: TextStyle(
+            paraFive,
+            style: const TextStyle(
               color: Colors.grey,
               fontSize: 16.0,
             ),
@@ -109,14 +110,14 @@ class MyHomeController extends GetxController {
         ),
         Center(
           child: Text(
-            'people that you want to meet with',
-            style: TextStyle(
+            paraSix,
+            style: const TextStyle(
               color: Colors.grey,
               fontSize: 18.0,
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10.0,
         ),
       ],
