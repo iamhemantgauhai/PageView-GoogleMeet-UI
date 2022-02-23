@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_meet_ui/app/app.dart';
 
 showAlertDialog(BuildContext context) {
   AlertDialog alert = AlertDialog(
@@ -9,16 +10,16 @@ showAlertDialog(BuildContext context) {
         height: 10.0,
       ),
       Row(
-        children: const [
-          Icon(
+        children: [
+          const Icon(
             Icons.close,
             color: Colors.white,
           ),
           Center(
             widthFactor: 3.2,
             child: Text(
-              'Google',
-              style: TextStyle(
+              engineTitle,
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 25.0,
               ),
@@ -26,24 +27,24 @@ showAlertDialog(BuildContext context) {
           ),
         ],
       ),
-      const PopupMenuItem(
+      PopupMenuItem(
         child: ListTile(
-          contentPadding: EdgeInsets.all(5.0),
-          leading: CircleAvatar(
+          contentPadding: const EdgeInsets.all(5.0),
+          leading: const CircleAvatar(
             backgroundColor: Colors.green,
             // backgroundImage: AssetImage('images/meet.jpeg'),
           ),
           title: Text(
-            'Bharat Kapila',
-            style: TextStyle(fontSize: 15.0, color: Colors.white),
+            name,
+            style: const TextStyle(fontSize: 15.0, color: Colors.white),
           ),
           subtitle: Text(
-            'bharatkapilabk@gmail.com',
-            style: TextStyle(fontSize: 12.0, color: Colors.white),
+            emailOne,
+            style: const TextStyle(fontSize: 12.0, color: Colors.white),
           ),
           trailing: Text(
-            '99+',
-            style: TextStyle(fontSize: 10.0, color: Colors.white),
+            bigNumber,
+            style: const TextStyle(fontSize: 10.0, color: Colors.white),
           ),
         ),
       ),
@@ -75,13 +76,13 @@ showAlertDialog(BuildContext context) {
               ),
             ),
           ),
-          child: const SizedBox(
+          child: SizedBox(
             height: 40.0,
             width: 220.0,
             child: Center(
               child: Text(
-                'Manage your Google Account',
-                style: TextStyle(color: Colors.white),
+                enginePara1,
+                style: const TextStyle(color: Colors.white),
               ),
             ),
           ),
@@ -100,24 +101,24 @@ showAlertDialog(BuildContext context) {
           ),
         ),
       ),
-      const PopupMenuItem(
+      PopupMenuItem(
         child: ListTile(
-          contentPadding: EdgeInsets.all(5.0),
-          leading: CircleAvatar(
+          contentPadding: const EdgeInsets.all(5.0),
+          leading: const CircleAvatar(
             backgroundColor: Colors.deepPurple,
             // backgroundImage: AssetImage('images/meet.jpeg'),
           ),
           title: Text(
-            'Bharat Kapila',
-            style: TextStyle(fontSize: 15.0, color: Colors.white),
+            name,
+            style: const TextStyle(fontSize: 15.0, color: Colors.white),
           ),
           subtitle: Text(
-            'bharat@appscrip.co',
-            style: TextStyle(fontSize: 12.0, color: Colors.white),
+            emailSecond,
+            style: const TextStyle(fontSize: 12.0, color: Colors.white),
           ),
           trailing: Text(
-            '99+',
-            style: TextStyle(fontSize: 10.0, color: Colors.white),
+            bigNumber,
+            style: const TextStyle(fontSize: 10.0, color: Colors.white),
           ),
         ),
       ),
@@ -131,9 +132,9 @@ showAlertDialog(BuildContext context) {
               color: Colors.white,
             ),
           ),
-          title: const Text(
-            'Add another account',
-            style: TextStyle(color: Colors.white, fontSize: 10.0),
+          title: Text(
+            addAccount,
+            style: const TextStyle(color: Colors.white, fontSize: 10.0),
           ),
         ),
       ),
@@ -147,9 +148,9 @@ showAlertDialog(BuildContext context) {
               color: Colors.white,
             ),
           ),
-          title: const Text(
-            'Manage account on this device',
-            style: TextStyle(color: Colors.white, fontSize: 10.0),
+          title: Text(
+            manageAccount,
+            style: const TextStyle(color: Colors.white, fontSize: 10.0),
           ),
         ),
       ),
@@ -167,26 +168,26 @@ showAlertDialog(BuildContext context) {
       Container(height: 10),
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
+        children: [
           Text(
-            'Privacy Policy',
-            style: TextStyle(
+            privacyPolicy,
+            style: const TextStyle(
               color: Colors.white,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 10.0,
           ),
           Text(
-            '*',
-            style: TextStyle(color: Colors.white),
+            starPoint,
+            style: const TextStyle(color: Colors.white),
           ),
-          SizedBox(
+          const SizedBox(
             width: 10.0,
           ),
           Text(
-            'Terms of Service',
-            style: TextStyle(color: Colors.white),
+            termsService,
+            style: const TextStyle(color: Colors.white),
           ),
         ],
       ),

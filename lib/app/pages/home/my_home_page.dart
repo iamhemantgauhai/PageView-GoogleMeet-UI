@@ -18,7 +18,7 @@ class MyHomePage extends StatelessWidget {
           children: <Widget>[
             UserAccountsDrawerHeader(
               accountName: Text(name),
-              accountEmail: Text(email),
+              accountEmail: Text(emailOne),
               currentAccountPicture: CircleAvatar(
                 backgroundColor: Colors.orange,
                 child: Text(
