@@ -165,12 +165,15 @@ class MyHomePage extends StatelessWidget {
             DotsIndicator(
               decorator: const DotsDecorator(
                 activeColor: Colors.deepPurple,
-                size: Size(5, 5),
+                size: Size(10, 10),
                 activeSize: Size(10, 10),
                 color: Colors.grey,
               ),
               dotsCount: 2,
               position: controller.ind!, //controller.ind!,
+            ),
+            const SizedBox(
+              height: 10.0,
             ),
           ],
         ),
